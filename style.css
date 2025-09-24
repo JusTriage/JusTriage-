@@ -1,0 +1,193 @@
+.nav-ribbon {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background: #0B3D2E;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 0 12px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0B3D2E44;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+.nav-logo-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    margin-right: 24px;
+    height: 100px;
+}
+.nav-links {
+    display: flex;
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+/* Navigation ribbon styles */
+.nav-ribbon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: #0B3D2E;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 0 12px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0B3D2E44;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+.nav-ribbon a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-ribbon a:hover {
+    background: #1F7A57;
+    color: #F7F9F8;
+}
+.nav-ribbon a:focus {
+    background: #86D2B2;
+    color: #0B3D2E;
+    outline: 2px solid #86D2B2;
+    outline-offset: 2px;
+}
+/* Minimal, high-contrast palette for JusTriage website */
+body {
+    background: #F7F9F8;
+    color: #222222;
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.svg-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DFF1E8;
+    padding: 32px 0 8px 0;
+}
+header {
+    background: #FFFFFF;
+    box-shadow: 0 2px 12px #E9ECEF;
+    border-bottom: 2px solid #E9ECEF;
+}
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.logo-title.left-align {
+    align-items: flex-start;
+    text-align: left;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #0B3D2E;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+.trading-name, .real-name, .address, .contact, .vat {
+    color: #222222;
+    font-size: 1rem;
+    margin: 2px 0;
+}
+.status-banner {
+    background: #0B3D2E;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0B3D2E44;
+    letter-spacing: 1px;
+}
+.bottom-banner {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+main {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+section {
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px #E9ECEF;
+    padding: 24px 20px;
+    border: 1px solid #E9ECEF;
+}
+section h2 {
+    color: #0B3D2E;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+section ul, section p {
+    color: #222222;
+    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+}
+.anti-fraud {
+    color: #1F7A57;
+    font-weight: bold;
+}
+footer {
+    background: #0B3D2E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 24px 0 12px 0;
+    font-size: 1rem;
+    margin-top: 32px;
+    border-top: 2px solid #E9ECEF;
+}
+a {
+    color: #1F7A57;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #86D2B2;
+    text-decoration: none;
+}
+a:focus {
+    color: #86D2B2;
+    outline: 2px solid #86D2B2;
+    outline-offset: 2px;
+}
+@media (max-width: 600px) {
+    .logo-title {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    main {
+        padding: 0 4px;
+    }
+    section {
+        padding: 16px 6px;
+    }
+    .svg-logo-wrapper {
+        padding: 16px 0 4px 0;
+    }
+}
