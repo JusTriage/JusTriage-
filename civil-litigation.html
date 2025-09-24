@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Civil Litigation Support — JusTriage</title>
+  <meta name="description" content="Navigate disputes with clarity before escalation. Professional civil litigation support from JusTriage.">
+  <style>
+    :root {
+      --green: #0B3D2E;
+      --hover: #1F7A57;
+      --accent: #DFF1E8;
+      --focus: #86D2B2;
+      --head: #111111;
+      --text: #333333;
+      --white: #FFF;
+      --shadow: 0 20px 40px rgba(0,0,0,0.10);
+      --radius: 16px;
+      --transition: 0.3s ease;
+    }
+    html, body {
+      margin: 0; padding: 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--white) 100%);
+      color: var(--text);
+      font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      min-height: 100vh;
+    }
+    a { color: var(--green); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--hover); text-decoration: underline; }
+    /* Hero Split */
+    .hero-split {
+      display: grid; grid-template-columns: 1fr 1fr; min-height: 380px;
+      box-shadow: var(--shadow); border-radius: var(--radius); overflow: hidden;
+      margin: 48px auto 32px; max-width: 1080px;
+    }
+    .hero-left {
+      background: var(--green); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 48px 38px;
+    }
+    .hero-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .hero-sub { font-size: 1.18rem; font-weight: 400; margin-bottom: 18px; opacity: 0.95; }
+    .hero-right {
+      background: var(--accent); display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .scales-bg {
+      width: 90%; height: 80%; min-height: 220px; opacity: 0.7;
+    }
+    /* Services Grid */
+    .services-section { max-width: 1080px; margin: 0 auto 48px; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 32px;
+      margin-top: 32px;
+    }
+    .service-card {
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 32px 22px; text-align: center; font-weight: 500;
+      font-size: 1.08rem; transition: box-shadow var(--transition), transform var(--transition);
+      cursor: pointer; border: 1px solid var(--accent);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .service-card:hover, .service-card:focus {
+      box-shadow: 0 8px 32px rgba(31,122,87,0.18);
+      transform: scale(1.04);
+      outline: none;
+    }
+    /* Timeline */
+    .timeline-section { background: var(--accent); padding: 56px 0 38px; }
+    .timeline-wrap { max-width: 900px; margin: 0 auto; position: relative; }
+    .timeline {
+      display: flex; justify-content: space-between; align-items: flex-end; position: relative; margin-top: 32px;
+    }
+    .timeline-step {
+      display: flex; flex-direction: column; align-items: center; flex: 1; position: relative;
+    }
+    .timeline-circle {
+      width: 44px; height: 44px; background: var(--focus); color: var(--green);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(134,210,178,0.12);
+      border: 2px solid var(--green);
+    }
+    .timeline-label { font-size: 1.08rem; color: var(--text); font-weight: 500; text-align: center; }
+    .timeline-line {
+      position: absolute; top: 22px; left: 0; right: 0; height: 0; z-index: 0;
+    }
+    .dotted {
+      border-top: 4px dotted var(--focus); width: 40%; position: absolute; left: 0; top: 22px;
+    }
+    .solid {
+      border-top: 4px solid var(--green); width: 60%; position: absolute; right: 0; top: 22px;
+    }
+    /* FAQ Accordion */
+    .faq-section { max-width: 800px; margin: 56px auto 48px; }
+    .faq-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 18px; color: var(--green); }
+    .faq-list { list-style: none; padding: 0; margin: 0; }
+    .faq-item { margin-bottom: 18px; border-radius: 12px; background: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .faq-question {
+      padding: 18px 22px; cursor: pointer; font-weight: 500; color: var(--green); font-size: 1.08rem; border-radius: 12px;
+      transition: background var(--transition);
+    }
+    .faq-question:hover, .faq-question:focus { background: var(--focus); color: var(--green); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 22px; color: var(--text); font-size: 1rem;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px; padding: 12px 22px 18px 22px;
+    }
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(90deg, var(--green) 0%, var(--focus) 100%);
+      color: #fff; text-align: center; padding: 54px 0 38px;
+      margin-top: 48px;
+    }
+    .cta-section .cta-title { font-size: 1.35rem; font-weight: 500; margin-bottom: 18px; }
+    .cta-section .cta-btn {
+      background: var(--white); color: var(--green); font-weight: 700; font-size: 1.1rem;
+      padding: 14px 32px; border-radius: 12px; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      cursor: pointer; transition: background var(--transition), color var(--transition);
+      text-decoration: none; margin-top: 12px;
+    }
+    .cta-section .cta-btn:hover, .cta-section .cta-btn:focus {
+      background: var(--focus); color: var(--green); outline: none;
+    }
+    @media (max-width: 1024px) {
+      .hero-split, .services-grid, .timeline { grid-template-columns: 1fr; flex-direction: column; gap: 18px; }
+      .hero-split { min-height: 320px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-split { grid-template-columns: 1fr; min-height: 220px; }
+      .hero-left, .hero-right { padding: 24px 12px; }
+      .services-grid { grid-template-columns: 1fr; gap: 14px; }
+      .timeline { flex-direction: column; gap: 32px; }
+      .faq-section { padding: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero-split">
+      <div class="hero-left">
+        <div class="hero-title">Civil Litigation Support</div>
+        <div class="hero-sub">Navigate disputes with clarity before escalation</div>
+      </div>
+      <div class="hero-right">
+        <svg class="scales-bg" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.18">
+            <ellipse cx="110" cy="60" rx="90" ry="40" fill="#1F7A57"/>
+            <rect x="100" y="20" width="20" height="60" rx="10" fill="#0B3D2E"/>
+            <path d="M60 60 Q110 10 160 60" stroke="#0B3D2E" stroke-width="4" fill="none"/>
+            <circle cx="60" cy="60" r="12" fill="#DFF1E8" stroke="#0B3D2E" stroke-width="2"/>
+            <circle cx="160" cy="60" r="12" fill="#DFF1E8" stroke="#0B3D2E" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+    <section class="services-section">
+      <h2 style="text-align:center;color:var(--green);font-size:2rem;font-weight:700;letter-spacing:.2px;margin-bottom:8px">Our Civil Litigation Services</h2>
+      <div class="services-grid">
+        <div class="service-card" tabindex="0">Pre-action protocol guidance</div>
+        <div class="service-card" tabindex="0">Dispute assessment & merit review</div>
+        <div class="service-card" tabindex="0">Document preparation support</div>
+        <div class="service-card" tabindex="0">Settlement exploration strategies</div>
+        <div class="service-card" tabindex="0">Court process demystification</div>
+        <div class="service-card" tabindex="0">Cost-benefit analysis</div>
+      </div>
+    </section>
+    <section class="timeline-section">
+      <div class="timeline-wrap">
+        <h2 style="text-align:center;color:var(--green);font-size:1.6rem;font-weight:700;margin-bottom:18px">From Dispute to Resolution</h2>
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="timeline-circle">1</div>
+            <div class="timeline-label">Dispute arises</div>
+            <div class="dotted"></div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">2</div>
+            <div class="timeline-label">JusTriage: Early guidance</div>
+            <div class="dotted"></div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">3</div>
+            <div class="timeline-label">JusTriage: Document review</div>
+            <div class="dotted"></div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">4</div>
+            <div class="timeline-label">JusTriage: Settlement options</div>
+            <div class="solid"></div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-circle">5</div>
+            <div class="timeline-label">Solicitor: Formal proceedings</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <div class="faq-title">Civil Litigation FAQs</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <div class="faq-question" tabindex="0">What is civil litigation?</div>
+          <div class="faq-answer">Civil litigation is the process of resolving disputes between individuals or organizations through the court system, excluding criminal matters.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-question" tabindex="0">When should I seek early guidance?</div>
+          <div class="faq-answer">Early guidance helps clarify your position, assess risks, and explore settlement options before formal legal action is taken.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-question" tabindex="0">What documents should I prepare?</div>
+          <div class="faq-answer">Key documents include contracts, correspondence, and any evidence relevant to the dispute. JusTriage can help review and organize these.</div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-question" tabindex="0">How does JusTriage differ from a solicitor?</div>
+          <div class="faq-answer">JusTriage provides early-stage triage, guidance, and document review. Solicitors handle formal proceedings and reserved legal activities.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="cta-section">
+      <div class="cta-title">Facing a dispute? Let's clarify your position first.</div>
+      <a class="cta-btn" href="#query">Raise a Query</a>
+    </section>
+  </main>
+</body>
+</html>
